@@ -1,0 +1,23 @@
+Esercizio 4 (num 5)
+
+elementi: parametro attuale
+lista: parametro formale
+scrivere il print (scambia(elementi))
+scrivere il print (scambia(elementi2)) altrimenti esegue solo l'ultimo
+la funzione ha vita propria, deve avere un valore di ingresso(argomento della lista) e un valore di uscita(return).
+
+Esercizio 4 (num 7)
+
+map: funzione che applica ad ogni elemento dei una lista(secondo parametro)
+map in questo caso ha 2 parametri
+
+Esercizio 4 (num 8)
+
+'elemento' prima del for è cosa deve inserire nella lista, ad 'elemento', gli abbiamo applicato la funzione
+list comprehension: [...]
+
+Esercizio 4 (num 9)
+
+ricorsione: una cosa che va all'infinito
+fattoriale: numero moltiplicato per i suoi precedenti
+0 fattoriale è sempre = 1
