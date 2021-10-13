@@ -1,2 +1,222 @@
 Slicing: è il meccanismo attraverso il quale recuperiamo una parte di una lista su python
+
 list comprehention: è il meccanismo attraverso il quale costruiamo una lista scrivendo nelle [] le istruzioni per generare i singoli elementi della lista
+
+CAP1:
+% Resto della divisione
+hex(190) conversione num dec in esa
+oct(120) conversione num dec in oct
+int("34") converte la stringa o il numero decimale in intero
+str(34) converte in stringa
+import math: per importare *
+round() arrotonda il valore di input a un numero specificato di posizioni o all'intero più vicino 
+abs() restituisce il valore assoluto di un numero
+divmod() quoziente e resto di una tupla
+
+
+CAP2:
+le stringhe possono essere inserite con virgolette singole, doppie o triple print
+print() =  stampa tutti i suoi argomenti come stringhe, separate da spazi e seguite da un'interruzione di riga:
+sep='...' serve per separare le parole con ad esempio i puntini
+end='!!' serve per aggiungere un qualcosa alla fine della stringa
+print("Hello","World",sep='...',end='!!')
+
++ serve per concatenare 2 o più stringhe
+
+- %s -> string
+- %d -> Integer
+- %f -> Float
+- %o -> Octal
+- %x -> Hexadecimal  print("Hexadecimal equivalent of the number = %x" %18)
+- %e -> exponential
+ print("Hello %s %s. This meaning of life is %d" %(string1,string2,42)) = Hello World !. This meaning of life is 42
+ moltiplicare una strigna per un intero: print("Hello World! "*5)
+ 
+ s="heLLo wORLd!"
+ print(s.capitalize(),"vs",s.title())
+ print("upper: '%s'"%s.upper(),"lower: '%s'"%s.lower(),"and swapped: '%s'"%s.swapcase())
+ print('|%s|' % "Hello World".center(30))
+ print("Hello World".replace("World","Class"))
+ s.count(w) = trova il numero di volte in cui w si verifica in s
+ s.find(w) = trova la prima posizione in cui si verifica la "w"
+ s.findr(w) = trova l'ultima pos in cui si verifica la 'w'
+ 
+ 'abc' < 'bbc' <= 'bbc' restituisce in questo caso 'true'
+ "ABC" in "This is the ABC of Python" restituisce 'true'
+ 
+s = '123456789'
+print("The string '%s' string is %d characters long" % (s, len(s)) ) =  The string '123456789' string is 9 characters long
+print('First character of',s,'is',s[0]) = First character of 123456789 is 1
+print('Last character of',s,'is',s[len(s)-1]) = Last character of 123456789 is 9
+print('First character of',s,'is',s[-len(s)]) =  First character of 123456789 is 1
+print('Last character of',s,'is',s[-1]) = Last character of 123456789 is 9
+print("First three characters",s[0:3]) = First three characters 123
+print("Next three characters",s[3:6]) = ext three characters 456
+print("First three characters", s[:3]) =  First three characters 123
+print("Last three characters", s[-3:]) = Last three characters 789
+
+split(): divide la stringa in parole separate da spazi (opzionalmente accetta un separatore come argomento)
+
+
+
+CAP3:
+SLICING liste ['1','2','3']: num = [0,1,2,3,4,5,6,7,8,9] print(num[0:4])
+
+min() = valore minimo
+max() = valore massimo
+sum() = somma
+
+somma delle liste: [1,2,3] + [5,4,7] = [1, 2, 3, 5, 4, 7]
+la (in) per vedere se quell'elemento è presente nella lista
+
+mlist = ['bzaa','ds','nc','az','z','klm']
+print('longest =',max(mlist, key=len)) =  longest = bzaa
+
+print(list('hello world !'),'Hello   World !!'.split())=  ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', ' ', '!'] ['Hello', 'World', '!!']
+ 
+append( ) is used to add a single element at the end of the list.
+extend( ) = estende la lista
+lst.count(1) = ''
+pop()
+remove()
+reverse()
+sort()
+sort() reverse= true
+sort() key(len)
+
+COPYNG A LIST:
+lista = [2,1,4,3]
+listb = lista[:]
+
+LIST COMPREHENSION:
+[10*i+j for i in [1,2,3] for j in [5,7]]
+[15, 17, 25, 27, 35, 37]
+
+TUPLE: liste che non possono essere modificate. Definizione tuple: tup = () o tup2 = tuple()
+tup3 = tuple([1,2,3])
+print(tup3)
+tup4 = tuple('Hello')
+print(tup4)
+Risultato:
+(1, 2, 3)
+('H', 'e', 'l', 'l', 'o')
+
+
+SET: definizione di un set: set1 = set([]) o set1 = {}
+set0 = set([1,2,2,3,3,4]) = {1, 2, 3, 4} 
+
+set1 = set([1,2,3])
+set2 = set([2,3,4,5])
+set1.union(set2) = {1, 2, 3, 4, 5}
+
+set1.add(0)
+set1 
+=
+{0, 1, 2, 3}
+
+set1.intersection(set2) =  {2, 3}
+set1.difference(set2) = {0, 1}
+
+set1.clear()
+set1
+=
+set()
+
+
+DIZIONARI: definizione di un dizionario: d= dict() o d= {}
+d = { 1: 'One', 2 : 'Two', 100 : 'Hundred'}
+len(d)
+= 
+3
+
+print(d[1]) = one
+
+names = ['One', 'Two', 'Three', 'Four', 'Five']
+numbers = [1, 2, 3, 4, 5]
+a1 = dict((name,number) for name,number in zip(names,numbers))
+print(a1)
+= 
+{'One': 1, 'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5}
+
+
+a2 = { name : len(name) for name in names}
+print(a2)
+=
+{'One': 3, 'Two': 3, 'Three': 5, 'Four': 4, 'Five': 4}
+
+a2.clear()
+print(a2)
+=
+{}
+
+[ v for v in a1.values() ] = [1, 2, 3, 4, 5]
+{ k for k in a1.keys() } = {'Five', 'Four', 'One', 'Three', 'Two'}
+
+val = a1.pop('Four')
+print(a1)
+print("Removed",val)
+= 
+{'One': 1, 'Two': 2, 'Three': 3, 'Five': 5}
+Removed 4
+
+
+UNITA' 5
+IF:
+x = 10
+y = 12
+if x > y:
+    print( "x>y")
+elif x < y:
+    print( "x<y")
+    if x==10:
+        print ("x=10")
+    else:
+        print ("invalid")
+else:
+    print ("x=y")
+    
+Risultato:
+x<y
+x=10
+
+
+CICLO FOR:
+Il "qualcosa" può essere una qualsiasi delle raccolte discusse in precedenza (liste, insiemi, dizionari).
+Alla variabile viene assegnato a turno ogni elemento della raccolta e l'algoritmo viene eseguito una volta con quel valore
+
+for ch in 'abc':
+    print(ch)
+total = 0
+for i in range(5):
+    total += i
+for i,j in [(1,2),(3,1)]:
+    total += i**j
+print("total =",total)
+
+risultato:
+a
+b
+c
+total = 14
+
+
+
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+total=0
+for list1 in list_of_lists:
+    for x in list1:
+        total = total+x
+print(total)  =   45
+
+
+
+
+
+
+
+
+
+
+
+
+
